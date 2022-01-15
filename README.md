@@ -57,8 +57,10 @@ Updated: 2022/01/14
   echo '\n# -------\n# thhuang\n# -------\nzmodule romkatv/powerlevel10k --use degit\n' >> ~/.zimrc
   zimfw install
   
+  # configuration wizard
   p10k configure
   
+  # configuration file
   vi ~/.p10k.zsh
   ```
 - Preferences > Profiles > Colors > Color Presets
@@ -66,7 +68,6 @@ Updated: 2022/01/14
     - [Neutron](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Neutron.itermcolors)
       - Preferences > Profiles > Colors > Color Presets > ANSI Colors > Black > Normal: 30% Gray
       - Preferences > Profiles > Colors > Color Presets > ANSI Colors > Black > Bright: 40% Gray
-
 - Preferences > Profiles > Session
   - [Check] Status bar enabled
   - Configure Status Bar
@@ -83,3 +84,7 @@ Updated: 2022/01/14
   ```
 - git
   - [Connect to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
+- neovim
+  ```sh
+  brew install neovim
+  ```
