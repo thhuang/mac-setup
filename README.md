@@ -81,3 +81,5 @@ Updated: 2022/01/14
   ```sh
   brew install htop
   ```
+- git
+  - [Connect to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
