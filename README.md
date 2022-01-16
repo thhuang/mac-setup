@@ -16,7 +16,7 @@
       - Zhuyin - Traditional
     - Settings
       - [Uncheck] Use the 中/英 key to switch to and from ABC
-  - Shortcuts < Input Sources
+  - Shortcuts > Input Sources
     - [Uncheck] Select the previous import source ^Space
 - Trackpad > Point & Click
   - [Check] Tap to click
@@ -82,7 +82,7 @@
   ```
 - Pass the bad match onto the command
   ```sh
-  echo '\nsetopt no_nomatch # use the command as is when pattern matching fails' > ~/.zshrc
+  echo '\nsetopt no_nomatch # use the command as is when pattern matching fails' >> ~/.zshrc
   ```
 
 ## Command Line Tools
