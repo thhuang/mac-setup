@@ -98,6 +98,10 @@
   ```sh
   brew install tree
   ```
+- ripgrep
+  ```sh
+  brew install ripgrep
+  ```
 - git
   - [Connect to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
   - Config

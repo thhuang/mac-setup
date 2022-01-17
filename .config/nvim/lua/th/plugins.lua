@@ -64,6 +64,11 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig" -- Enable LSP
   use "williamboman/nvim-lsp-installer" -- Simple to use language server installer
 
+  -- Telescope
+  use {'nvim-telescope/telescope.nvim', requires = {
+      'nvim-lua/plenary.nvim',
+  }}
+
   -- Snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
