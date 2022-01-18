@@ -46,7 +46,7 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "tpope/vim-commentary" -- For commenting with gcc & gc
   use "jiangmiao/auto-pairs" -- Auto pairs for '(', '[', & '{'
-  use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'} -- Preview a markdown file in realtime
+  use {"iamcco/markdown-preview.nvim", run = "cd app && yarn install"} -- Preview a markdown file in realtime
 
   -- Colorschemes
   use "folke/tokyonight.nvim"
@@ -60,6 +60,10 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lsp" -- Nvim LSP completions
   use "hrsh7th/cmp-nvim-lua" -- Nvim Lua completions
 
+  -- Snippets
+  use "L3MON4D3/LuaSnip" --snippet engine
+  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+
   -- LSP
   use "neovim/nvim-lspconfig" -- Enable LSP
   use "williamboman/nvim-lsp-installer" -- Simple to use language server installer
@@ -69,14 +73,14 @@ return packer.startup(function(use)
       'nvim-lua/plenary.nvim',
   }}
 
-  -- Snippets
-  use "L3MON4D3/LuaSnip" --snippet engine
-  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+  -- Treesitter
+  use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
+  use "p00f/nvim-ts-rainbow"
 
   -- Rust
-  use {'simrat39/rust-tools.nvim', requires = {
-      'mfussenegger/nvim-dap',
-      'nvim-lua/plenary.nvim',
+  use {"simrat39/rust-tools.nvim", requires = {
+      "mfussenegger/nvim-dap",
+      "nvim-lua/plenary.nvim",
   }}
 
   -- Automatically set up your configuration after cloning packer.nvim
