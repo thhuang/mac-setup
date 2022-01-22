@@ -45,7 +45,7 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "tpope/vim-commentary" -- For commenting with gcc & gc
-  use "jiangmiao/auto-pairs" -- Auto pairs for '(', '[', & '{'
+  use "windwp/nvim-autopairs" -- Auto-pairs that supports multiple characters
   use {"iamcco/markdown-preview.nvim", run = "cd app && yarn install"} -- Preview a markdown file in realtime
 
   -- Colorschemes

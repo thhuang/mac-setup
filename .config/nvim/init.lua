@@ -6,4 +6,5 @@ require "th.cmp"
 require "th.lsp"
 require "th.telescope"
 require "th.treesitter"
+require "th.autopairs"
 
