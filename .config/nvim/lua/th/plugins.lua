@@ -48,6 +48,7 @@ return packer.startup(function(use)
   use "windwp/nvim-autopairs" -- Auto-pairs that supports multiple characters
   use {"iamcco/markdown-preview.nvim", run = "cd app && yarn install"} -- Preview a markdown file in realtime
   use "lewis6991/gitsigns.nvim" -- Git
+  use {"nvim-telescope/telescope.nvim", requires = {"nvim-lua/plenary.nvim"}} -- Fuzzy finder
 
   -- Colorschemes
   use "folke/tokyonight.nvim"
@@ -69,11 +70,6 @@ return packer.startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig" -- Enable LSP
   use "williamboman/nvim-lsp-installer" -- Simple to use language server installer
-
-  -- Telescope
-  use {'nvim-telescope/telescope.nvim', requires = {
-      'nvim-lua/plenary.nvim',
-  }}
 
   -- Treesitter
   use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
