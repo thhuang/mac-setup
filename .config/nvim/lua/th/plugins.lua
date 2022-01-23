@@ -59,6 +59,7 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- Snippet completions
   use "hrsh7th/cmp-nvim-lsp" -- Nvim LSP completions
   use "hrsh7th/cmp-nvim-lua" -- Nvim Lua completions
+  use "numToStr/Comment.nvim" -- Comment
 
   -- Snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -76,6 +77,7 @@ return packer.startup(function(use)
   -- Treesitter
   use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
   use "p00f/nvim-ts-rainbow"
+  use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Rust
   use {"simrat39/rust-tools.nvim", requires = {
