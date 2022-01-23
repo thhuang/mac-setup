@@ -8,4 +8,5 @@ require "th.telescope"
 require "th.treesitter"
 require "th.autopairs"
 require "th.comment"
+require "th.gitsigns"
 

@@ -47,6 +47,7 @@ return packer.startup(function(use)
   use "tpope/vim-commentary" -- For commenting with gcc & gc
   use "windwp/nvim-autopairs" -- Auto-pairs that supports multiple characters
   use {"iamcco/markdown-preview.nvim", run = "cd app && yarn install"} -- Preview a markdown file in realtime
+  use "lewis6991/gitsigns.nvim" -- Git
 
   -- Colorschemes
   use "folke/tokyonight.nvim"
