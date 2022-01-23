@@ -108,10 +108,15 @@
     ```sh
     git config --global user.email "tzhsn.huang@gmail.com"
     ```
+- Xcode command line tools
+  ```sh
+  xcode-select --install
+  ```
 - neovim
   ```sh
   brew install neovim
   ```
+
 
 ## Programming Language Runtimes
 - Node.js, NPM, & Yarn
@@ -122,62 +127,14 @@
   ```
   
 ## neovim
-- Create config
-  ```sh
-  mkdir -p ~/.config/nvim
-  touch ~/.config/nvim/init.vim
-  ```
-- Install [vim-plug](https://github.com/junegunn/vim-plug)
-  ```sh
-  sh -c 'curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  ```
-- Create a file for plugins
-  ```sh
-  mkdir ~/.config/nvim/vim-plug
-  touch ~/.config/nvim/vim-plug/plugins.vim
-  ```
-- Create a file for settings
-  ```sh
-  touch ~/.config/nvim/settings.vim
-  ```
-- Add the following to `~/.config/nvim/settings.vim
-  ```vim
-  set number
-  set relativenumber
-  set mouse=a
-  set autoindent
-  set tabstop=4
-  set shiftwidth=4
-  set expandtab     " Always uses spaces instead of tab characters (et).
-  set softtabstop=0 " Number of spaces a <Tab> counts for. When 0, featuer is off (sts).
-  set smarttab      " Inserts blanks on a <Tab> key (as per sw, ts and sts).
-
-  inoremap jk <esc>
-  ```
-- Add the following to `~/.config/nvim/vim-plug/plugins.vim`
-  ```vim
-   call plug#begin('~/.config/nvim/autoload/plugged')
-
-      "File system explorer
-      Plug 'https://github.com/preservim/nerdtree'
-
-      " Status bar
-      Plug 'https://github.com/vim-airline/vim-airline'
-
-      " Auto pairs for '(' '[' '{'
-      Plug 'https://github.com/jiangmiao/auto-pairs'
-
-      " Commenting with gcc & gc
-      Plug 'https://github.com/tpope/vim-commentary'
-
-  call plug#end()
-  ```
-- Add the following to `~/.config/nvim/init.vim`
-  ```vim
-  " Settings
-  source $HOME/.config/nvim/settings.vim
-  
-  " Plugins
-  source $HOME/.config/nvim/vim-plug/plugins.vim
-  ```
+Soft link [`.config/nvim`](.config/nvim) to `~/.config/nvim`
+- [Language Server Protocol](https://github.com/williamboman/nvim-lsp-installer)
+  - C++: `ccls`
+    ```sh
+    brew install llvm
+    brew install cmake
+    ```
+  - JSON: `jsonls`
+  - Python: `pyright`
+  - Rust: `rust_analyzer`
+  - Lua: `sumneko_lua`
