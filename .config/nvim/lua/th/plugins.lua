@@ -49,6 +49,9 @@ return packer.startup(function(use)
   use {"iamcco/markdown-preview.nvim", run = "cd app && yarn install"} -- Preview a markdown file in realtime
   use "lewis6991/gitsigns.nvim" -- Git
   use {"nvim-telescope/telescope.nvim", requires = {"nvim-lua/plenary.nvim"}} -- Fuzzy finder
+  use "numToStr/Comment.nvim" -- Comment
+  use "kyazdani42/nvim-web-devicons" -- Icons
+  use "kyazdani42/nvim-tree.lua" -- File navigator
 
   -- Colorschemes
   use "folke/tokyonight.nvim"
@@ -61,7 +64,6 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- Snippet completions
   use "hrsh7th/cmp-nvim-lsp" -- Nvim LSP completions
   use "hrsh7th/cmp-nvim-lua" -- Nvim Lua completions
-  use "numToStr/Comment.nvim" -- Comment
 
   -- Snippets
   use "L3MON4D3/LuaSnip" --snippet engine
