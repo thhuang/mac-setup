@@ -15,4 +15,5 @@ require "th.toggleterm"
 require "th.lualine"
 require "th.alpha"
 require "th.project"
+require "th.indentline"
 

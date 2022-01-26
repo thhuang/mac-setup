@@ -56,6 +56,7 @@ return packer.startup(function(use)
 	use("moll/vim-bbye") -- Close buffers without closing the window
 	use("akinsho/toggleterm.nvim") -- Terminal
 	use("nvim-lualine/lualine.nvim") -- Status line
+	use("lukas-reineke/indent-blankline.nvim") -- Indentation guides
 
 	-- Landing page
 	use("goolord/alpha-nvim")
