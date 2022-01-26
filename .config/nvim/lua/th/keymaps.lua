@@ -68,4 +68,5 @@ keymap("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>d", "<cmd>Telescope lsp_definitions<cr>", opts)
 keymap("n", "<leader>r", "<cmd>Telescope lsp_references<cr>", opts)
 keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
-
+-- Formatting
+keymap("n", "<leader>s", "<cmd>Format<cr>", opts)
