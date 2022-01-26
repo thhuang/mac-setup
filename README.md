@@ -133,6 +133,11 @@
     ```sh
     mv ~/Downloads/go ~/Development/libraries/.
     ```
+- Lua
+  - Formatter: `stylua`
+    ```sh
+    brew install stylua
+    ```
 - Node.js, NPM, & Yarn
   ```sh
   brew install node
