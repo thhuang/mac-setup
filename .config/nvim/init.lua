@@ -13,4 +13,6 @@ require "th.nvim-tree"
 require "th.bufferline"
 require "th.toggleterm"
 require "th.lualine"
+require "th.alpha"
+require "th.project"
 
