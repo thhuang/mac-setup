@@ -10,4 +10,5 @@ require "th.autopairs"
 require "th.comment"
 require "th.gitsigns"
 require "th.nvim-tree"
+require "th.bufferline"
 

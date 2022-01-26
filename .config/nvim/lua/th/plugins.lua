@@ -52,7 +52,8 @@ return packer.startup(function(use)
   use "numToStr/Comment.nvim" -- Comment
   use "kyazdani42/nvim-web-devicons" -- Icons
   use "kyazdani42/nvim-tree.lua" -- File navigator
-
+  use "akinsho/bufferline.nvim" -- Buffer line
+  use "moll/vim-bbye" -- Close buffers without closing the window
   -- Colorschemes
   use "folke/tokyonight.nvim"
 
