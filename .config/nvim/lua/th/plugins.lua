@@ -55,6 +55,7 @@ return packer.startup(function(use)
   use "akinsho/bufferline.nvim" -- Buffer line
   use "moll/vim-bbye" -- Close buffers without closing the window
   use "akinsho/toggleterm.nvim" -- Terminal
+  use "nvim-lualine/lualine.nvim" -- Status line
 
   -- Colorschemes
   use "folke/tokyonight.nvim"
