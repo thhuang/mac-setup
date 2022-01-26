@@ -127,13 +127,23 @@
 
 
 ## Programming Language Runtimes
+- Go
+  - Download the binary release and untar it
+  - Move the `go` folder into `~/Development/libraries/`
+    ```sh
+    mv ~/Downloads/go ~/Development/libraries/.
+    ```
 - Node.js, NPM, & Yarn
   ```sh
   brew install node
   npm install -g npm
   npm install -g yarn
   ```
-  
+- Rust
+  ```sh
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  ```
+
 ## neovim
 Soft link [`.config/nvim`](.config/nvim) to `~/.config/nvim`
 - [Language Server Protocol](https://github.com/williamboman/nvim-lsp-installer)
