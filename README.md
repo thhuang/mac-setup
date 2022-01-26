@@ -94,6 +94,10 @@
   ```sh
   brew install htop
   ```
+- ncdu
+  ```sh
+  brew insall ncdu
+  ```
 - tree
   ```sh
   brew install tree
@@ -108,6 +112,10 @@
     ```sh
     git config --global user.email "tzhsn.huang@gmail.com"
     ```
+- lazygit
+  ```sh
+  brew install lazygit
+  ```
 - Xcode command line tools
   ```sh
   xcode-select --install
