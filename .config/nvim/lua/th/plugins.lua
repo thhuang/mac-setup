@@ -54,6 +54,8 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-tree.lua" -- File navigator
   use "akinsho/bufferline.nvim" -- Buffer line
   use "moll/vim-bbye" -- Close buffers without closing the window
+  use "akinsho/toggleterm.nvim" -- Terminal
+
   -- Colorschemes
   use "folke/tokyonight.nvim"
 
