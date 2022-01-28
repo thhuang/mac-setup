@@ -86,6 +86,10 @@
   ```
 
 ## Command Line Tools
+- cmake
+  ```sh
+  brew install cmake
+  ```
 - wget
   ```sh
   brew install wget
@@ -116,7 +120,7 @@
   ```sh
   brew install lazygit
   ```
-- Xcode command line tools
+- xcode command line tools
   ```sh
   xcode-select --install
   ```
@@ -152,12 +156,9 @@
 ## neovim
 Soft link [`.config/nvim`](.config/nvim) to `~/.config/nvim`
 - [Language Server Protocol](https://github.com/williamboman/nvim-lsp-installer)
-  - C++: `ccls`
-    ```sh
-    brew install llvm
-    brew install cmake
-    ```
+  - C++: `clangd`
+  - Go: `gopls`
   - JSON: `jsonls`
+  - Lua: `sumneko_lua`
   - Python: `pyright`
   - Rust: `rust_analyzer`
-  - Lua: `sumneko_lua`
