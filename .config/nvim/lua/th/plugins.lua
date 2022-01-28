@@ -90,10 +90,10 @@ return packer.startup(function(use)
 	use("ahmedkhalf/project.nvim")
 
 	-- Rust
-	use({ "simrat39/rust-tools.nvim", requires = {
-		"mfussenegger/nvim-dap",
-		"nvim-lua/plenary.nvim",
-	} })
+	use({ "simrat39/rust-tools.nvim", requires = { "mfussenegger/nvim-dap", "nvim-lua/plenary.nvim" } })
+
+	-- Go
+	use({ "fatih/vim-go", run = ":GoUpdateBinaries" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
