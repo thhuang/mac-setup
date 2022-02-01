@@ -57,6 +57,7 @@ return packer.startup(function(use)
 	use("akinsho/toggleterm.nvim") -- Terminal
 	use("nvim-lualine/lualine.nvim") -- Status line
 	use("lukas-reineke/indent-blankline.nvim") -- Indentation guides
+	use("qpkorr/vim-bufkill") -- Delete a buffer without closing the split or window with BD
 
 	-- Landing page
 	use("goolord/alpha-nvim")
