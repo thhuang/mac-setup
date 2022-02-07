@@ -70,3 +70,5 @@ keymap("n", "<leader>r", "<cmd>Telescope lsp_references<cr>", opts)
 keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 -- Formatting
 keymap("n", "<leader>s", "<cmd>Format<cr>", opts)
+-- Toggleterm
+keymap("n", "<leader>tg", "<cmd>lua _LAZYGIT_TOGGLE()<cr>", opts)
