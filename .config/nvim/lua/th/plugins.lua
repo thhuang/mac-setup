@@ -98,6 +98,9 @@ return packer.startup(function(use)
 	-- Go
 	use({ "fatih/vim-go", run = ":GoUpdateBinaries" })
 
+	-- Bison, flex, and RE-flex
+	use("justinmk/vim-syntax-extra")
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
