@@ -1,19 +1,18 @@
-require "th.options"
-require "th.keymaps"
-require "th.plugins"
-require "th.colorscheme"
-require "th.cmp"
-require "th.lsp"
-require "th.telescope"
-require "th.treesitter"
-require "th.autopairs"
-require "th.comment"
-require "th.gitsigns"
-require "th.nvim-tree"
-require "th.bufferline"
-require "th.toggleterm"
-require "th.lualine"
-require "th.alpha"
-require "th.project"
-require "th.indentline"
-
+require("th.options")
+require("th.keymaps")
+require("th.plugins")
+require("th.colorscheme")
+require("th.cmp")
+require("th.lsp")
+require("th.telescope")
+require("th.treesitter")
+require("th.autopairs")
+require("th.comment")
+require("th.gitsigns")
+require("th.nvim-tree")
+require("th.bufferline")
+require("th.toggleterm")
+require("th.lualine")
+require("th.alpha")
+require("th.project")
+require("th.indentline")
