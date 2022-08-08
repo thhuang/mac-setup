@@ -18,7 +18,7 @@ null_ls.setup({
 		formatting.stylua,
 
 		-- javascript
-		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
+		formatting.prettier.with({ extra_args = { "--single-quote" } }),
 
 		-- python
 		formatting.yapf,
