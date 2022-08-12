@@ -71,4 +71,4 @@ vim.cmd([[autocmd Filetype javascript setlocal shiftwidth=2 tabstop=2 expandtab]
 vim.cmd([[autocmd Filetype javascriptreact setlocal shiftwidth=2 tabstop=2 expandtab]])
 
 -- For json files
-vim.cmd([[autocmd Filetype javascriptreact setlocal shiftwidth=2 tabstop=2 expandtab]])
+vim.cmd([[autocmd Filetype json setlocal shiftwidth=2 tabstop=2 expandtab]])
