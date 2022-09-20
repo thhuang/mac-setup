@@ -1,56 +1,66 @@
-local lsp_installer_status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
-if not lsp_installer_status_ok then
-	vim.notify("nvim-lsp-installer not found!")
+local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
+if not lspconfig_status_ok then
+	vim.notify("lspconfig not found!")
 	return
 end
 
-local rust_tool_status_ok, rust_tool = pcall(require, "rust-tools")
-if not rust_tool_status_ok then
+local mason_status_ok, mason = pcall(require, "mason")
+if not mason_status_ok then
+	vim.notify("mason not found!")
+	return
+end
+
+local mason_lspconfig_status_ok, mason_lspconfig = pcall(require, "mason-lspconfig")
+if not mason_lspconfig_status_ok then
+	vim.notify("mason-lspconfig not found!")
+	return
+end
+
+local rust_tools_status_ok, rust_tools = pcall(require, "rust-tools")
+if not rust_tools_status_ok then
 	vim.notify("ruslt-tools not found!")
 	return
 end
-rust_tool.setup({})
 
--- Register a handler that will be called for all installed servers.
--- Alternatively, you may also register handlers on specific server instances instead (see example below).
-lsp_installer.on_server_ready(function(server)
-	local opts = {
-		on_attach = require("th.lsp.handlers").on_attach,
-		capabilities = require("th.lsp.handlers").capabilities,
-	}
+mason.setup({
+	ui = {
+		icons = {
+			package_installed = "✓",
+		},
+	},
+})
 
-	if server.name == "clangd" then
-		local clangd_opts = require("th.lsp.settings.clangd")
-		opts = vim.tbl_deep_extend("force", clangd_opts, opts)
-	end
+mason_lspconfig.setup({
+	ensure_installed = {
+		"clangd",
+		"html",
+		"jsonls",
+		"racket_langserver",
+		"rust_analyzer",
+		"sumneko_lua",
+		"tsserver",
+	},
+	automatic_installation = true,
+})
 
-	if server.name == "jsonls" then
-		local jsonls_opts = require("th.lsp.settings.jsonls")
-		opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
-	end
+local opts = {
+	on_attach = require("th.lsp.handlers").on_attach,
+	capabilities = require("th.lsp.handlers").capabilities,
+}
 
-	if server.name == "sumneko_lua" then
-		local sumneko_opts = require("th.lsp.settings.sumneko_lua")
-		opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
-	end
+-- C++
+lspconfig.clangd.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.clangd"), opts))
 
-	if server.name == "rust_analyzer" then
-		local rust_analyzer_opts = require("th.lsp.settings.rust_analyzer")
-		opts = vim.tbl_deep_extend("force", rust_analyzer_opts, opts)
+-- Lua
+lspconfig.sumneko_lua.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.sumneko_lua"), opts))
 
-		-- Initialize the LSP via rust-tools instead
-		require("rust-tools").setup({
-			-- The "server" property provided in rust-tools setup function are the
-			-- settings rust-tools will provide to lspconfig during init.
-			-- We merge the necessary settings from nvim-lsp-installer (server:get_default_options())
-			-- with the user's own settings (opts).
-			server = vim.tbl_deep_extend("force", server:get_default_options(), opts),
-		})
-		server:attach_buffers()
-		return
-	end
+-- Racket
+lspconfig.racket_langserver.setup(opts)
 
-	-- This setup() function is exactly the same as lspconfig's setup function.
-	-- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-	server:setup(opts)
-end)
+-- Rust
+rust_tools.setup({
+	server = vim.tbl_deep_extend("force", require("th.lsp.settings.rust_analyzer"), opts),
+})
+
+-- JSON
+lspconfig.jsonls.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.jsonls"), opts))

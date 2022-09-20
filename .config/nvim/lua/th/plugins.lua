@@ -83,7 +83,8 @@ return packer.startup(function(use)
 
 	-- LSP
 	use("neovim/nvim-lspconfig") -- Enable LSP
-	use("williamboman/nvim-lsp-installer") -- Simple to use language server installer
+	use("williamboman/mason.nvim") -- Simple to use language server installer
+	use("williamboman/mason-lspconfig.nvim") -- mason extension
 	use("jose-elias-alvarez/null-ls.nvim") -- Formatters and linters
 
 	-- Treesitter
