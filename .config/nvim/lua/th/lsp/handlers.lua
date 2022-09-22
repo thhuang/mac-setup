@@ -85,10 +85,6 @@ local function lsp_keymaps(bufnr)
 end
 
 M.on_attach = function(client, bufnr)
-	if client.name == "tsserver" then
-		client.resolved_capabilities.document_formatting = false
-	end
-
 	if client.name == "clangd" then
 		client.resolved_capabilities.document_formatting = false
 	end
@@ -98,6 +94,14 @@ M.on_attach = function(client, bufnr)
 	end
 
 	if client.name == "sumneko_lua" then
+		client.resolved_capabilities.document_formatting = false
+	end
+
+	if client.name == "tsserver" then
+		client.resolved_capabilities.document_formatting = false
+	end
+
+	if client.name == "jsonls" then
 		client.resolved_capabilities.document_formatting = false
 	end
 
