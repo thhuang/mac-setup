@@ -149,9 +149,17 @@
     ```sh
     brew install stylua
     ```
-- Node.js, NPM, & Yarn
+- NVM, Node.js, NPM, & Yarn
+  <!-- ```sh -->
+  <!-- brew install node -->
+  <!-- npm install -g npm -->
+  <!-- npm install -g yarn -->
+  <!-- ``` -->
   ```sh
-  brew install node
+  echo 'zmodule lukechilds/zsh-nvm\n' >> ~/.zimrc
+  zimfw install
+  nvm install node
+  nvm use node
   npm install -g npm
   npm install -g yarn
   ```
