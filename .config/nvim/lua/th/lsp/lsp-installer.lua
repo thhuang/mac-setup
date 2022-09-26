@@ -38,6 +38,7 @@ mason_lspconfig.setup({
 		"racket_langserver",
 		"rust_analyzer",
 		"sumneko_lua",
+		"tailwindcss",
 		"tsserver",
 	},
 	automatic_installation = true,
@@ -51,6 +52,9 @@ local opts = {
 -- C++
 lspconfig.clangd.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.clangd"), opts))
 
+-- JSON
+lspconfig.jsonls.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.jsonls"), opts))
+
 -- Lua
 lspconfig.sumneko_lua.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.sumneko_lua"), opts))
 
@@ -62,5 +66,5 @@ rust_tools.setup({
 	server = vim.tbl_deep_extend("force", require("th.lsp.settings.rust_analyzer"), opts),
 })
 
--- JSON
-lspconfig.jsonls.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.jsonls"), opts))
+-- Tailwind
+lspconfig.tailwindcss.setup({})
