@@ -67,7 +67,7 @@ rust_tools.setup({
 })
 
 -- Tailwind
-lspconfig.tailwindcss.setup({})
+lspconfig.tailwindcss.setup(opts)
 
 -- Typescript
-lspconfig.tsserver.setup({})
+lspconfig.tsserver.setup(opts)
