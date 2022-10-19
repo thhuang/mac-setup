@@ -51,10 +51,10 @@ return packer.startup(function(use)
 	use({ "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } }) -- Fuzzy finder
 	use({ "numToStr/Comment.nvim", tag = "v0.6" }) -- Comment
 	use("kyazdani42/nvim-web-devicons") -- Icons
-	use({ "kyazdani42/nvim-tree.lua", commit = "6abc87b1d92fc8223f1e374728ea45c848bfdf6d" }) -- File navigator
-	use({ "akinsho/bufferline.nvim", tag = "v1.2.0" }) -- Buffer line
+	use("kyazdani42/nvim-tree.lua") -- File navigator
+	use("akinsho/bufferline.nvim") -- Buffer line
 	use("moll/vim-bbye") -- Close buffers without closing the window
-	use({ "akinsho/toggleterm.nvim", commit = "dca8f4d9516270cb41c147ed692f3ee420c5e515" }) -- Terminal
+	use("akinsho/toggleterm.nvim") -- Terminal
 	use("nvim-lualine/lualine.nvim") -- Status line
 	use("lukas-reineke/indent-blankline.nvim") -- Indentation guides
 	use("qpkorr/vim-bufkill") -- Delete a buffer without closing the split or window with BD

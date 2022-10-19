@@ -35,7 +35,6 @@ mason_lspconfig.setup({
 		"clangd",
 		"html",
 		"jsonls",
-		"racket_langserver",
 		"rust_analyzer",
 		"sumneko_lua",
 		"tailwindcss",
