@@ -33,6 +33,7 @@ mason.setup({
 mason_lspconfig.setup({
 	ensure_installed = {
 		"clangd",
+		"gopls",
 		"html",
 		"jsonls",
 		"rust_analyzer",
@@ -56,6 +57,9 @@ lspconfig.jsonls.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.jso
 
 -- Lua
 lspconfig.sumneko_lua.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.sumneko_lua"), opts))
+
+-- Go
+lspconfig.gopls.setup(opts)
 
 -- Racket
 lspconfig.racket_langserver.setup(opts)
