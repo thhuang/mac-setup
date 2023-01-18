@@ -33,13 +33,13 @@ mason.setup({
 mason_lspconfig.setup({
 	ensure_installed = {
 		"clangd",
-		"gopls",
-		"html",
-		"jsonls",
-		"rust_analyzer",
-		"sumneko_lua",
-		"tailwindcss",
-		"tsserver",
+		-- "gopls",
+		-- "html",
+		-- "jsonls",
+		-- "rust_analyzer",
+		-- "sumneko_lua",
+		-- "tailwindcss",
+		-- "tsserver",
 	},
 	automatic_installation = true,
 })
@@ -53,24 +53,24 @@ local opts = {
 lspconfig.clangd.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.clangd"), opts))
 
 -- JSON
-lspconfig.jsonls.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.jsonls"), opts))
+-- lspconfig.jsonls.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.jsonls"), opts))
 
 -- Lua
-lspconfig.sumneko_lua.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.sumneko_lua"), opts))
+-- lspconfig.sumneko_lua.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.sumneko_lua"), opts))
 
 -- Go
-lspconfig.gopls.setup(opts)
+-- lspconfig.gopls.setup(opts)
 
 -- Racket
-lspconfig.racket_langserver.setup(opts)
+-- lspconfig.racket_langserver.setup(opts)
 
 -- Rust
-rust_tools.setup({
-	server = vim.tbl_deep_extend("force", require("th.lsp.settings.rust_analyzer"), opts),
-})
+-- rust_tools.setup({
+-- 	server = vim.tbl_deep_extend("force", require("th.lsp.settings.rust_analyzer"), opts),
+-- })
 
 -- Tailwind
-lspconfig.tailwindcss.setup(opts)
+-- lspconfig.tailwindcss.setup(opts)
 
 -- Typescript
-lspconfig.tsserver.setup(opts)
+-- lspconfig.tsserver.setup(opts)

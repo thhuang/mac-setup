@@ -58,6 +58,12 @@ vim.cmd([[
     endfunction
 ]])
 
+-- For cpp files
+vim.cmd([[autocmd Filetype cpp setlocal shiftwidth=2 tabstop=2 expandtab]])
+
+-- For c files
+vim.cmd([[autocmd Filetype c setlocal shiftwidth=2 tabstop=2 expandtab]])
+
 -- For html files
 vim.cmd([[autocmd Filetype html setlocal shiftwidth=2 tabstop=2 expandtab]])
 
