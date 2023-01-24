@@ -162,6 +162,7 @@
   nvm use node
   npm install -g npm
   npm install -g yarn
+  npm install -g prettier
   ```
 - Rust
   ```sh
