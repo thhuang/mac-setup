@@ -64,6 +64,9 @@ vim.cmd([[autocmd Filetype html setlocal shiftwidth=2 tabstop=2 expandtab]])
 -- For css files
 vim.cmd([[autocmd Filetype css setlocal shiftwidth=2 tabstop=2 expandtab]])
 
+-- For scss files
+vim.cmd([[autocmd Filetype scss setlocal shiftwidth=2 tabstop=2 expandtab]])
+
 -- For js files
 vim.cmd([[autocmd Filetype javascript setlocal shiftwidth=2 tabstop=2 expandtab]])
 
