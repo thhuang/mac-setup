@@ -36,6 +36,7 @@ mason_lspconfig.setup({
 		"gopls",
 		"html",
 		"jsonls",
+		"racket_langserver",
 		"rust_analyzer",
 		"sumneko_lua",
 		"tailwindcss",
