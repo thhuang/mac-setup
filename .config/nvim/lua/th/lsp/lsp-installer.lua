@@ -38,7 +38,7 @@ mason_lspconfig.setup({
 		"jsonls",
 		"racket_langserver",
 		"rust_analyzer",
-		"sumneko_lua",
+		"lua_ls",
 		"tailwindcss",
 		"tsserver",
 	},
@@ -57,7 +57,7 @@ lspconfig.clangd.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.cla
 lspconfig.jsonls.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.jsonls"), opts))
 
 -- Lua
-lspconfig.sumneko_lua.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.sumneko_lua"), opts))
+lspconfig.lua_ls.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.lua_ls"), opts))
 
 -- Go
 lspconfig.gopls.setup(opts)
