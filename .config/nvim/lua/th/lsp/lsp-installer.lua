@@ -36,7 +36,6 @@ mason_lspconfig.setup({
 		"gopls",
 		"html",
 		"jsonls",
-		"racket_langserver",
 		"rust_analyzer",
 		"lua_ls",
 		"tailwindcss",
@@ -61,9 +60,6 @@ lspconfig.lua_ls.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.lua
 
 -- Go
 lspconfig.gopls.setup(opts)
-
--- Racket
-lspconfig.racket_langserver.setup(opts)
 
 -- Rust
 rust_tools.setup({
