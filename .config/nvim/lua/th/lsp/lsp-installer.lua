@@ -52,14 +52,14 @@ local opts = {
 -- C++
 lspconfig.clangd.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.clangd"), opts))
 
+-- Go
+lspconfig.gopls.setup(opts)
+
 -- JSON
 lspconfig.jsonls.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.jsonls"), opts))
 
 -- Lua
 lspconfig.lua_ls.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.lua_ls"), opts))
-
--- Go
-lspconfig.gopls.setup(opts)
 
 -- Rust
 rust_tools.setup({
