@@ -88,7 +88,7 @@ return packer.startup(function(use)
 	use("jose-elias-alvarez/null-ls.nvim") -- Formatters and linters
 
 	-- Treesitter
-	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", commit = "3dea0bbf71438d2d5a79de0145b509dfb16525a5" })
+	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use("p00f/nvim-ts-rainbow")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 	use("ahmedkhalf/project.nvim")
