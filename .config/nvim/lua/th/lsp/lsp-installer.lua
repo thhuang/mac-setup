@@ -35,6 +35,7 @@ mason_lspconfig.setup({
 		"clangd",
 		"gopls",
 		"html",
+		"jdtls",
 		"jsonls",
 		"rust_analyzer",
 		"lua_ls",
@@ -54,6 +55,9 @@ lspconfig.clangd.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.cla
 
 -- Go
 lspconfig.gopls.setup(opts)
+
+-- Java
+lspconfig.jdtls.setup({})
 
 -- JSON
 lspconfig.jsonls.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.jsonls"), opts))

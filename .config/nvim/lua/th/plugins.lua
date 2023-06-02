@@ -99,6 +99,9 @@ return packer.startup(function(use)
 	-- Go
 	use({ "fatih/vim-go", run = ":GoUpdateBinaries" })
 
+	-- Java
+	use("mfussenegger/nvim-jdtls")
+
 	-- Bison, flex, and RE-flex
 	use("justinmk/vim-syntax-extra")
 
