@@ -33,14 +33,14 @@ mason.setup({
 mason_lspconfig.setup({
 	ensure_installed = {
 		"clangd",
-		"gopls",
-		"html",
-		"jdtls",
-		"jsonls",
-		"rust_analyzer",
+		-- "gopls",
+		-- "html",
+		-- "jdtls",
+		-- "jsonls",
+		-- "rust_analyzer",
 		"lua_ls",
-		"tailwindcss",
-		"tsserver",
+		-- "tailwindcss",
+		-- "tsserver",
 	},
 	automatic_installation = true,
 })
@@ -54,24 +54,24 @@ local opts = {
 lspconfig.clangd.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.clangd"), opts))
 
 -- Go
-lspconfig.gopls.setup(opts)
+-- lspconfig.gopls.setup(opts)
 
 -- Java
-lspconfig.jdtls.setup({})
+-- lspconfig.jdtls.setup({})
 
 -- JSON
-lspconfig.jsonls.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.jsonls"), opts))
+-- lspconfig.jsonls.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.jsonls"), opts))
 
 -- Lua
 lspconfig.lua_ls.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.lua_ls"), opts))
 
 -- Rust
-rust_tools.setup({
-	server = vim.tbl_deep_extend("force", require("th.lsp.settings.rust_analyzer"), opts),
-})
+-- rust_tools.setup({
+-- 	server = vim.tbl_deep_extend("force", require("th.lsp.settings.rust_analyzer"), opts),
+-- })
 
 -- Tailwind
-lspconfig.tailwindcss.setup(opts)
+-- lspconfig.tailwindcss.setup(opts)
 
 -- Typescript
-lspconfig.tsserver.setup(opts)
+-- lspconfig.tsserver.setup(opts)
