@@ -39,6 +39,7 @@ mason_lspconfig.setup({
 		"jsonls",
 		"rust_analyzer",
 		"lua_ls",
+		"pyright",
 		"tailwindcss",
 		"tsserver",
 	},
@@ -64,6 +65,9 @@ lspconfig.jsonls.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.jso
 
 -- Lua
 lspconfig.lua_ls.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.lua_ls"), opts))
+
+-- Python
+lspconfig.pyright.setup({})
 
 -- Rust
 rust_tools.setup({
