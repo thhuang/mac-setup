@@ -73,7 +73,7 @@ nvim_tree.setup({
 	renderer = {
 		highlight_git = true,
 		root_folder_modifier = ":t",
-		root_folder_label = false,
+		root_folder_label = true,
 		icons = {
 			show = {
 				git = true,
