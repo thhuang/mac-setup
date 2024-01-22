@@ -1,5 +1,10 @@
-local status_ok, configs = pcall(require, "nvim-treesitter.configs")
-if not status_ok then
+local configs_status_ok, configs = pcall(require, "nvim-treesitter.configs")
+if not configs_status_ok then
+	return
+end
+
+local context_commentstring_status_ok, context_commentstring = pcall(require, "ts_context_commentstring")
+if not context_commentstring_status_ok then
 	return
 end
 
@@ -14,7 +19,6 @@ configs.setup({
 		additional_vim_regex_highlighting = true,
 	},
 	indent = { enable = true, disable = { "yaml" } },
-
 	-- nvim-ts-rainbow
 	rainbow = {
 		enable = true,
@@ -24,10 +28,9 @@ configs.setup({
 		-- colors = {}, -- table of hex strings
 		-- termcolors = {} -- table of colour name strings
 	},
+})
 
-	-- nvim-ts-context-commentstring
-	context_commentstring = {
-		enable = true,
-		enable_autocmd = false,
-	},
+context_commentstring.setup({
+	enable = true,
+	enable_autocmd = true,
 })

@@ -49,7 +49,6 @@ nvim_tree.setup({
 	},
 	view = {
 		width = 30,
-		hide_root_folder = false,
 		side = "left",
 		-- mappings = {
 		-- 	custom_only = false,
@@ -74,6 +73,7 @@ nvim_tree.setup({
 	renderer = {
 		highlight_git = true,
 		root_folder_modifier = ":t",
+		root_folder_label = false,
 		icons = {
 			show = {
 				git = true,

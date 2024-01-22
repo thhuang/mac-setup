@@ -97,6 +97,7 @@ return packer.startup(function(use)
 
 	-- Go
 	use({ "fatih/vim-go", run = ":GoUpdateBinaries" })
+	-- use({ "ray-x/go.nvim" })
 
 	-- Java
 	use("mfussenegger/nvim-jdtls")
