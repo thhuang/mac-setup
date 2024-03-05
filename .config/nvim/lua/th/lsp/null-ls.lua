@@ -21,7 +21,11 @@ null_ls.setup({
 		formatting.prettier.with({ extra_args = { "--single-quote" } }),
 
 		-- python
-		formatting.yapf,
-		diagnostics.flake8,
+		formatting.yapf.with({
+			extra_args = { "--style", "{based_on_style: google, column_limit: 120, indent_width: 4}" },
+		}),
+		diagnostics.flake8.with({
+			extra_args = { "--max-line-length", "120" },
+		}),
 	},
 })
