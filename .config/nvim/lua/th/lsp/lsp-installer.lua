@@ -40,6 +40,7 @@ mason_lspconfig.setup({
 		"rust_analyzer",
 		"lua_ls",
 		"pyright",
+		"svelte",
 		"tailwindcss",
 		"tsserver",
 	},
@@ -73,6 +74,9 @@ lspconfig.pyright.setup({})
 rust_tools.setup({
 	server = vim.tbl_deep_extend("force", require("th.lsp.settings.rust_analyzer"), opts),
 })
+
+-- Svelte
+lspconfig.svelte.setup(opts)
 
 -- Tailwind
 lspconfig.tailwindcss.setup(opts)
