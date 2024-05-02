@@ -37,6 +37,7 @@ mason_lspconfig.setup({
 		"html",
 		"jdtls",
 		"jsonls",
+		"kotlin_language_server",
 		"rust_analyzer",
 		"lua_ls",
 		"pyright",
@@ -63,6 +64,9 @@ lspconfig.jdtls.setup({})
 
 -- JSON
 lspconfig.jsonls.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.jsonls"), opts))
+
+-- Kotlin
+lspconfig.kotlin_language_server.setup(opts)
 
 -- Lua
 lspconfig.lua_ls.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.lua_ls"), opts))
