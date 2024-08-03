@@ -41,19 +41,19 @@
   ```sh
   brew install --cask iterm2
   ```
-- Preferences > Profiles > Text > Font
+- Settings > Profiles > Text > Font
   - MesloLGS Nerd Font Mono
   - Regular
   - 14
   - 100
   - 100
-- Preferences > Profiles > Colors > Color Presets
+- Settings > Profiles > Colors > Color Presets
   - Download color schemes
     - [Tokyonight - Night](misc/tokyonight-night.itermcolors)
     - [Neutron](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Neutron.itermcolors)
-      - Preferences > Profiles > Colors > Color Presets > ANSI Colors > Black > Normal: 30% Gray
-      - Preferences > Profiles > Colors > Color Presets > ANSI Colors > Black > Bright: 40% Gray
-- Preferences > Profiles > Session
+      - Settings > Profiles > Colors > Color Presets > ANSI Colors > Black > Normal: 30% Gray
+      - Settings > Profiles > Colors > Color Presets > ANSI Colors > Black > Bright: 40% Gray
+- Settings > Profiles > Session
   - [Check] Status bar enabled
   - Configure Status Bar
     - Active Components
@@ -61,7 +61,7 @@
       - Memory Utilization
       - Network Throughput
     - Auto-Rainbow: Light Colors
-- Preferences > Profiles > Keys
+- Settings > Profiles > Keys
   - Left Option key: Esc+
 - Z shell (if zsh is not the default shell)
   ```sh
