@@ -32,7 +32,6 @@
 
 - Fira Code, Hack Nerd Font, Meslo Nerd Font, and Lato
   ```sh
-  brew tap homebrew/cask-fonts
   brew install --cask font-fira-code font-hack-nerd-font font-meslo-lg-nerd-font font-lato
   ```
 
