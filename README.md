@@ -5,8 +5,6 @@
 - Dock & Menu Bar
   - Dock Size: smaller
   - [Check] Automatically hide and show the Dock
-  - [Check] Automatically hide and show the menu bar on desktop
-  - [Check] Automatically hide and show the menu bar on full screen
 - Keyboard
   - Keyboard
     - Key Repeat: fast
@@ -17,9 +15,10 @@
       - Zhuyin - Traditional
     - Settings
       - [Uncheck] Use the 中/英 key to switch to and from ABC
-  - Shortcuts > Input Sources
+  - Keyboard Shortcuts > Input Sources
     - [Uncheck] Select the previous import source ^Space
 - Trackpad > Point & Click
+  - Tracking speed: faster
   - [Check] Tap to click
 
 ## Applications
