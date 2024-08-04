@@ -51,7 +51,7 @@ return packer.startup(function(use)
 	use({ "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } }) -- Fuzzy finder
 	use({ "numToStr/Comment.nvim", tag = "v0.6" }) -- Comment
 	use("kyazdani42/nvim-web-devicons") -- Icons
-	use("kyazdani42/nvim-tree.lua") -- File navigator
+	use({ "kyazdani42/nvim-tree.lua", tag = "v1.3.3" }) -- File navigator
 	use("akinsho/bufferline.nvim") -- Buffer line
 	use("moll/vim-bbye") -- Close buffers without closing the window
 	use("akinsho/toggleterm.nvim") -- Terminal
