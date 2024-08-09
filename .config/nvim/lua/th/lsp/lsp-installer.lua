@@ -72,7 +72,7 @@ lspconfig.kotlin_language_server.setup(opts)
 lspconfig.lua_ls.setup(vim.tbl_deep_extend("force", require("th.lsp.settings.lua_ls"), opts))
 
 -- Python
-lspconfig.pyright.setup({})
+lspconfig.pyright.setup(opts)
 
 -- Rust
 rust_tools.setup({
