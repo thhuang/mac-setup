@@ -85,23 +85,14 @@ local function lsp_keymaps(bufnr)
 end
 
 M.on_attach = function(client, bufnr)
-	if client.name == "clangd" then
-		client.server_capabilities.documentFormattingProvider = false
-	end
-
-	if client.name == "html" then
-		client.server_capabilities.documentFormattingProvider = false
-	end
-
-	if client.name == "sumneko_lua" then
-		client.server_capabilities.documentFormattingProvider = false
-	end
-
-	if client.name == "tsserver" then
-		client.server_capabilities.documentFormattingProvider = false
-	end
-
-	if client.name == "jsonls" then
+	local servers_to_disable_formatting = {
+		"clangd",
+		"html",
+		"sumneko_lua",
+		"tsserver",
+		"jsonls",
+	}
+	if vim.tbl_contains(servers_to_disable_formatting, client.name) then
 		client.server_capabilities.documentFormattingProvider = false
 	end
 
